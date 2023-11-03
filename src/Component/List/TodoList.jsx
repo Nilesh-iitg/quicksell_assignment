@@ -1,6 +1,6 @@
 import React from 'react'
 import './todolist.css'
-import TodoCard from '../TodoCard/TodoCard'
+import TodoCard from '../Tile/TodoCard'
 import AdditionIcon from '../../Shared/Icon/AdditionIcon'
 import LoadMoreIcon from '../../Shared/Icon/LoadMoreIcon'
 import Avatar from '../../Shared/Avatar/Avatar'
@@ -46,14 +46,13 @@ const TodoList = ({groupName='',tickets=[],displayOption}) => {
   
   return (
     <div style={{maxWidth:'450px',width:'100%',marginBottom:'2rem'}}>
-        <div className='flex-row space-between' style={{marginBottom:"2rem"}}>
-          <div className='flex-row item-gap centre'>
+        <div style={{marginBottom:"2rem",display:'flex',justifyContent:'space-between'}}>
+          <div  style={{display:'flex',columnGap:'10px',justifyContent:'center',alignItems:'center'}}>
           {getIcon()}
            <h4 className='text-primary'>{groupName}</h4>
            <h4 className='text-primary'>{numberOfTickets}</h4>
           </div>
-          <div className='flex-row item-gap' style={{alignItems:'center'}}>
-            <AdditionIcon />
+          <div style={{alignItems:'center',display:'flex',columnGap:'10px'}}>
             <LoadMoreIcon />
           </div>
         </div>

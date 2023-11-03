@@ -1,6 +1,6 @@
 .container {
     box-sizing: border-box;
-    background: rgb(193,111,40);
+    background: #17871b;
     border-radius: 50%;
     position: relative;
   }
@@ -12,7 +12,7 @@
   }
   .avatatext {
     color: #fff;
-    padding: 4px 6px;
+    padding: 6px 6px;
     text-transform: uppercase;
     display: flex;
     justify-content: center;

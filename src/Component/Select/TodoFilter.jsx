@@ -20,7 +20,7 @@ const TodoFilter = ({ displayOption, sortOption, setDisplayOption, setSortOption
   return (
     <div style={{ position: "relative" }}>
       <div
-        className="outline-button cursor-pointer"
+        className="button-primary cursor-pointer"
         style={{ display: "flex", columnGap: "5px" }}
         onClick={handleDropDown}
       >
@@ -30,8 +30,10 @@ const TodoFilter = ({ displayOption, sortOption, setDisplayOption, setSortOption
       </div>
       {isDropDownSelected && (
         <div
-          className="outline-button flex-col"
+          className="button-primary"
           style={{
+            display:'flex',
+            flexDirection:'column',
             padding: "12px 22px",
             position: "absolute",
             borderRadius: "6px",
@@ -51,7 +53,7 @@ const TodoFilter = ({ displayOption, sortOption, setDisplayOption, setSortOption
             <label htmlFor="group" className="text-gray">
               Grouping
             </label>
-            <select value={displayOption} onChange={handleDisplayChange} className="select-button" name="group" id="group">
+            <select value={displayOption} onChange={handleDisplayChange} className="button-secondary" name="group" id="group">
               <option value="status">Status</option>
               <option value="user">User</option>
               <option value="priority">Priority</option>
@@ -68,7 +70,7 @@ const TodoFilter = ({ displayOption, sortOption, setDisplayOption, setSortOption
             <label htmlFor="order" className="text-gray">
               Ordering
             </label>
-            <select value={sortOption} onChange={handleSortChange} className="select-button" name="order" id="order">
+            <select value={sortOption} onChange={handleSortChange} className="button-secondary" name="order" id="order">
               <option value="priority">Priority</option>
               <option value="title">Title</option>
             </select>

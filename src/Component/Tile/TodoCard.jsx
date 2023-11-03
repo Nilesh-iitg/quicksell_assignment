@@ -1,7 +1,6 @@
 import React from "react";
 import "./todocard.css";
 import Avatar from "../../Shared/Avatar/Avatar";
-import LoadMoreIcon from "../../Shared/Icon/LoadMoreIcon";
 import DotIcon from "../../Shared/Icon/DotIcon";
 
 const TodoCard = ({ticket={},displayOption=''}) => {
@@ -36,10 +35,7 @@ const TodoCard = ({ticket={},displayOption=''}) => {
       </div>
       <div></div>
       <div style={{ display: "flex" }}>
-        <div className="outline-button">
-          <LoadMoreIcon />
-        </div>
-        <div className="outline-button" style={{marginLeft:'6px'}}>
+        <div className="button-primary" style={{marginLeft:'6px'}}>
           <DotIcon />
           <h4 className="text-gray">{ticket?.tag[0]}</h4>
         </div>
