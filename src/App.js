@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import TodoFilter from "./Component/Select/TodoFilter";
 import TodoList from "./Component/List/TodoList";
 
@@ -82,10 +81,7 @@ function App() {
   };
 
   return (
-    <Router>
       <div className="App">
-        <Routes>
-          <Route path="/" element={
             <div>
               <div style={{ background: "#fff", padding: "1rem 4rem" }}>
                 <TodoFilter
@@ -113,10 +109,7 @@ function App() {
                 ))}
               </div>
             </div>
-          } />
-        </Routes>
       </div>
-    </Router>
   );
 }
 
